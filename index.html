@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- ============================================= -->
+<!-- 🔗 CONFIGURACIÓN DE LA TAQUILLA 🔗           -->
+<!-- ============================================= -->
+<script>
+    // ⬇️⬇️⬇️ NÚMERO DE WHATSAPP DE LA TAQUILLA (sin + ni espacios) ⬇️⬇️⬇️
+    var NUMERO_TAQUILLA = "584129355672";
+    // Ejemplo: si el número es +58 412-935-5672 pones: "584129355672"
+
+    // ⬇️⬇️⬇️ CAMBIA EL NOMBRE DE LA IMAGEN AQUÍ ⬇️⬇️⬇️
+    var IMAGEN_OPERADORA = "YUSE NUEVA.png";
+    // Debe ser el nombre exacto del archivo subido al repo
+
+    // ⬇️⬇️⬇️ MENSAJE PREDETERMINADO (opcional) ⬇️⬇️⬇️
+    var MENSAJE_INICIAL = "Hola! Vi tu publicidad y quiero información para jugar 🎰";
+</script>
+<!-- ============================================= -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia La Fortuna | Tu Taquilla Online de Confianza</title>
+    <meta name="description" content="Escríbenos directo por WhatsApp. Sellamos tus jugadas de animalitos, triples, tripletas y pollas. Atención personalizada.">
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1191313203218028');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1191313203218028&ev=PageView&noscript=1"/></noscript>
+    <!-- End Facebook Pixel Code -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #1a0a2e 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 420px;
+            width: 100%;
+            background: linear-gradient(180deg, rgba(45, 27, 78, 0.9) 0%, rgba(26, 10, 46, 0.95) 100%);
+            border-radius: 20px;
+            padding: 30px 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(138, 43, 226, 0.2);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .brand-name {
+            color: #FFD700;
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .subtitle {
+            color: #E0E0E0;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .main-image {
+            width: calc(100% + 20px);
+            margin-left: -10px;
+            margin-right: -10px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .benefits {
+            margin-bottom: 25px;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            border-left: 3px solid #25D366;
+        }
+        
+        .benefit-icon {
+            font-size: 20px;
+        }
+        
+        .benefit-text {
+            color: #FFFFFF;
+            font-size: 15px;
+        }
+        
+        .operators {
+            text-align: center;
+            padding: 15px;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+        
+        .operators-text {
+            color: #FFD700;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 18px 30px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+        }
+        
+        .cta-button:active {
+            transform: translateY(-1px);
+        }
+        
+        .whatsapp-icon {
+            margin-right: 10px;
+            font-size: 22px;
+        }
+        
+        .contact {
+            text-align: center;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .contact-text {
+            color: #A0A0A0;
+            font-size: 14px;
+        }
+        
+        .contact-link {
+            color: #FFD700;
+            text-decoration: none;
+        }
+        
+        /* Animación del botón */
+        @keyframes pulse {
+            0% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 8px 35px rgba(37, 211, 102, 0.6); }
+            100% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); }
+        }
+        
+        .cta-button {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <span class="brand-name" style="font-size: 18px; white-space: nowrap;">🎰 AGENCIA ONLINE LA FORTUNA</span>
+            </div>
+        </div>
+        
+        <!-- Tu imagen -->
+        <img id="imgOperadora" alt="Agencia La Fortuna" class="main-image">
+        
+        <!-- Nota educativa ANTES del botón -->
+        <p style="text-align: center; color: #E0E0E0; font-size: 13px; margin-bottom: 12px;">
+            💬 Escríbenos directo y te atendemos al instante.<br>
+            <strong style="color: #25D366;">¡Tu taquilla online 24/7!</strong>
+        </p>
+        
+        <!-- Botón con enlace camuflado -->
+        <a href="javascript:void(0)" 
+           class="cta-button" 
+           id="joinButton"
+           onclick="contactarTaquilla()">
+            <span class="whatsapp-icon">📱</span>
+            ESCRIBIR POR WHATSAPP
+        </a>
+        
+        <div class="benefits">
+            <div class="benefit-item">
+                <span class="benefit-icon">✅</span>
+                <span class="benefit-text">Sellamos tus jugadas al instante</span>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon">🎰</span>
+                <span class="benefit-text">Animalitos, Triples, Tripletas y Pollas</span>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon">📊</span>
+                <span class="benefit-text">Resultados en tiempo real</span>
+            </div>
+            <div class="benefit-item">
+                <span class="benefit-icon">💬</span>
+                <span class="benefit-text">Atención directa y personalizada</span>
+            </div>
+        </div>
+        
+        <div class="operators">
+            <span class="operators-text">🏆 Tu agencia de confianza — Pago seguro y rápido</span>
+        </div>
+        
+        <div class="contact">
+            <p class="contact-text">
+                📞 Escríbenos directo | 
+                <a href="https://instagram.com/AG.LAFORTUNA" class="contact-link">@AG.LAFORTUNA</a>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Cargar imagen de la operadora desde la variable de arriba
+        document.getElementById('imgOperadora').src = IMAGEN_OPERADORA;
+
+        // Enlace ofuscado para evitar rastreo de bots
+        const _w1 = "https://wa.";
+        const _w2 = "me/";
+        
+        function contactarTaquilla() {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {
+                    content_name: 'WhatsApp Direct Contact',
+                    content_category: 'Taquilla'
+                });
+            }
+            setTimeout(function() {
+                var msg = encodeURIComponent(MENSAJE_INICIAL);
+                window.location.href = _w1 + _w2 + NUMERO_TAQUILLA + "?text=" + msg;
+            }, 300);
+        }
+    </script>
+</body>
+</html>
